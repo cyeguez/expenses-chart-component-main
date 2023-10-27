@@ -1,38 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
-  
+
 </head>
+
 <body>
 
-  My balance
-  $921.48
+  <div class="expenses-chart">
+    <!-- header start -->
+    <div class="header">
+      <div class="header__content">
+        <p class="header__content__title">My balance</p>
+        <p class="header__content__cost">$921.48</p>
+      </div>
+      <div class="header__logo">
+        <img src="./asset/images/logo.svg" alt="Logo" class="header__logo_image">
+      </div>
+    </div>
+    <!-- end header -->
 
-  Spending - Last 7 days
+    <!-- Main start -->
+    <main class="statistics">
+      <h1 class="statistics__title">Spending - Last 7 days</h1>
+      <div class="statistics__body">
+        <div class="statistics__body__item" > 
+          <div class="statistics__body__item--mon">            
+          </div>
+          <p>mon</p>
+        </div>
+          
+        
+        <div class="statistics__body-item  statistics__body-item--tue"> </div>
+        <div class="statistics__body-item  statistics__body-item--wed"> </div>
+        <div class="statistics__body-item  statistics__body-item--thu"> </div>
+        <div class="statistics__body-item  statistics__body-item--fri"> </div>
+        <div class="statistics__body-item  statistics__body-item--sat"> </div>
+        <div class="statistics__body-item  statistics__body-item--sut"> </div>
+      </div>
+      <hr class="statistics__divider-line">
+      <div class="statistics__result">
+        <div class="statistics__result__left">
+          <p class="statistics__result__result__left__title">Total this month</p>
+          <p class="statistics__result__result__left__total"> $478.33</p>
+        </div>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+        <div class="statistics__result__right">
+          <p class="statistics__result__result__right__rate">+2.4%</p>
+          <p class="statistics__result__result__right__subtitle"> from last month</p>
 
-  Total this month
-  $478.33
+        </div>
+      </div>
+    </main>
+    <!-- Main end -->
+  </div>
 
-  +2.4%
-  from last month
-  
+
+
+
+
+
+
+
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="js/app.js"></script>
 </body>
+
 </html>

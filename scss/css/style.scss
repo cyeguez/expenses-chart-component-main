@@ -1,0 +1,5 @@
+@forward '../component/header';
+@forward '../component/main';
+@forward '../component/footer';
+@use '../base/reset';
+@use '../base/reset-custom.scss';

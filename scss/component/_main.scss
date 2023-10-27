@@ -1,0 +1,25 @@
+@use "../base/var" as v;
+.statistics {
+  background-color: v.$Very-pale-orange;
+  height: 429px;
+  padding: 30px 21px;
+
+  .statistics__title {
+    font-size: 25px;
+    text-align: center;
+    color: v.$Dark-brown;
+    font-weight: 700;
+  }
+  .statistics__body {
+    .statistics__body__item {
+      .statistics__body__item--mon {
+        @include v.column(33px, 50px, v.$Softred)
+      }
+      p{
+        
+        margin-top: 1rem;
+        color: v.$Medium-brown;
+      }
+    }
+  }
+}
