@@ -1,25 +1,25 @@
 @use "../base/var" as v;
 .expenses-chart {
-  padding-inline: 16px;
-  display: grid;
-  row-gap: 1rem;
+  width: 375px;
+  height:41.6875rem ;
+  padding-inline: 1rem;
+  overflow: hidden;
  
-
   .header {
-    height:96px ;
-    margin-top: 68px;
-    border-radius: 0.5rem;
+    height:6.25rem ;
+    margin-top: 4.25rem;
+    border-radius: 16px;
     background-color: v.$Softred;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 20px;
+    padding: 1.5rem 1.25rem;
     color: v.$Very-pale-orange;
 
     .header__content {
       &__title {
         font-size: 0.875em;
-        margin-bottom: 0.5rem;
+        margin-bottom: 8px;
       }
       &__cost {
         font-size: 1.313em;
@@ -27,8 +27,37 @@
       }
     }
     .header__logo {
-      width: 3.9375rem;
-      height: 2.6875rem;
+      width: 5rem;
+      
     }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  body{
+   
+    display: grid;
+    place-items: center;
+    min-width: 100vh;
+
+    .expenses-chart{
+      width: 455px;
+      margin: 180px auto ;
+
+      .header{
+        padding: 1.875rem 2rem;
+        &__content {
+          &__title {
+            font-size: 1.3em;
+            margin-bottom: 8px;
+          }
+          &__cost {
+            font-size: 2em;
+            font-weight: 700;
+          }
+        }
+      }
+
+      }
   }
 }

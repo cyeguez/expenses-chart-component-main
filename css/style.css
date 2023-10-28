@@ -1,63 +1,226 @@
 @charset "UTF-8";
 .expenses-chart {
-  padding-inline: 16px;
-  display: grid;
-  row-gap: 1rem;
+  width: 375px;
+  height: 41.6875rem;
+  padding-inline: 1rem;
+  overflow: hidden;
 }
 .expenses-chart .header {
-  height: 96px;
-  margin-top: 68px;
-  border-radius: 0.5rem;
+  height: 6.25rem;
+  margin-top: 4.25rem;
+  border-radius: 16px;
   background-color: hsl(10, 79%, 65%);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
+  padding: 1.5rem 1.25rem;
   color: hsl(33, 100%, 98%);
 }
 .expenses-chart .header .header__content__title {
   font-size: 0.875em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 .expenses-chart .header .header__content__cost {
   font-size: 1.313em;
   font-weight: 700;
 }
 .expenses-chart .header .header__logo {
-  width: 3.9375rem;
-  height: 2.6875rem;
+  width: 5rem;
 }
 
-.statistics {
-  background-color: hsl(33, 100%, 98%);
-  height: 429px;
-  padding: 30px 21px;
+@media screen and (min-width: 425px) {
+  body {
+    display: grid;
+    place-items: center;
+    min-width: 100vh;
+  }
+  body .expenses-chart {
+    width: 455px;
+    margin: 180px auto;
+  }
+  body .expenses-chart .header {
+    padding: 1.875rem 2rem;
+  }
+  body .expenses-chart .header__content__title {
+    font-size: 1.3em;
+    margin-bottom: 8px;
+  }
+  body .expenses-chart .header__content__cost {
+    font-size: 2em;
+    font-weight: 700;
+  }
 }
-.statistics .statistics__title {
-  font-size: 25px;
+.statistics {
+  height: 26.25rem;
+  margin-top: 1rem;
+  margin-bottom: 4.125rem;
+  background-color: hsl(33, 100%, 98%);
+  padding: 1.875rem 20px;
+  border-radius: 16px;
+}
+.statistics__title {
+  font-size: 1.6em;
   text-align: center;
   color: hsl(25, 47%, 15%);
   font-weight: 700;
 }
-.statistics .statistics__body .statistics__body__item .statistics__body__item--mon {
-  width: 33px;
-  height: 50px;
+.statistics__body {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-around;
+  height: 12.375rem;
+}
+.statistics__body .statistics__body__item {
+  position: relative;
+}
+.statistics__body .statistics__body__item .statistics__body__item__bar {
+  width: 32px;
+  height: 148px;
   background-color: hsl(10, 79%, 65%);
   border-radius: 5px;
-}
-.statistics .statistics__body .statistics__body__item p {
   margin-top: 1rem;
+  position: relative;
+}
+.statistics__body .statistics__body__item .statistics__body__item__bar .statistics__body__item__label {
+  margin-top: 1rem;
+  color: hsl(28, 10%, 53%);
+  position: absolute;
+  bottom: -32px;
+}
+.statistics__body .statistics__body__item .statistics__body__item__bar .statistics__body__item__value {
+  width: 2.2rem;
+  position: absolute;
+  font-size: 0.5em;
+  background-color: hsl(25, 47%, 15%);
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+  left: -3px;
+  top: -2rem;
+  color: hsl(33, 100%, 98%);
+  display: none;
+}
+.statistics__divider-line {
+  width: 100%;
+  height: 3px;
+  background-color: hsl(27, 66%, 92%);
+  margin-block: 1rem;
+}
+.statistics .statistics__result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.statistics .statistics__result__left__title {
+  color: hsl(28, 10%, 53%);
+}
+.statistics .statistics__result__left__total {
+  color: hsl(25, 47%, 15%);
+  font-weight: 700;
+  font-size: 2em;
+}
+.statistics .statistics__result__right__rate {
+  text-align: end;
+  color: hsl(25, 47%, 15%);
+  font-weight: 700;
+}
+.statistics .statistics__result__right__subtitle {
   color: hsl(28, 10%, 53%);
 }
 
+@media screen and (min-width: 425px) {
+  .statistics {
+    height: 26.25rem;
+    margin-top: 1rem;
+    margin-bottom: 4.125rem;
+    background-color: hsl(33, 100%, 98%);
+    padding: 2.5rem;
+    border-radius: 16px;
+  }
+  .statistics__title {
+    font-size: 2em;
+  }
+  .statistics__body {
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: space-around;
+    height: 12.375rem;
+    align-items: first baseline;
+  }
+  .statistics__body .statistics__body__item {
+    position: relative;
+  }
+  .statistics__body .statistics__body__item .statistics__body__item__bar {
+    width: 40px;
+    height: 148px;
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 5px;
+    margin-top: 1rem;
+    position: relative;
+  }
+  .statistics__body .statistics__body__item .statistics__body__item__bar .statistics__body__item__label {
+    margin-top: 1rem;
+    color: hsl(28, 10%, 53%);
+    position: absolute;
+    bottom: -32px;
+  }
+  .statistics__body .statistics__body__item .statistics__body__item__bar .statistics__body__item__value {
+    width: 3.1375rem;
+    position: absolute;
+    font-size: 0.5em;
+    background-color: hsl(25, 47%, 15%);
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    font-weight: 700;
+    left: -3px;
+    top: -2rem;
+    color: hsl(33, 100%, 98%);
+    display: none;
+  }
+  .statistics__body .statistics__result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .statistics__body .statistics__result__left__title {
+    color: hsl(28, 10%, 53%);
+  }
+  .statistics__body .statistics__result__left__total {
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+    font-size: 3em;
+  }
+  .statistics__body .statistics__result__right__rate {
+    text-align: end;
+    color: hsl(25, 47%, 15%);
+    font-weight: 700;
+  }
+  .statistics__body .statistics__result__right__subtitle {
+    color: hsl(28, 10%, 53%);
+  }
+}
 .attribution {
+  width: 90%;
+  margin: 0px auto;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: center;
   font-size: 11px;
   text-align: center;
+  color: hsl(25, 47%, 15%);
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(10, 79%, 65%);
 }
 
+@media screen and (min-width: 425px) {
+  .attribution {
+    margin-top: -18.75rem;
+    font-size: 1rem;
+  }
+}
 /* Definimos las Custom properties */
 :root {
   /* Colores */

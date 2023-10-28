@@ -1,24 +1,162 @@
 @use "../base/var" as v;
 .statistics {
+  height: 26.25rem;
+  margin-top: 1rem;
+  margin-bottom: 4.125rem;
   background-color: v.$Very-pale-orange;
-  height: 429px;
-  padding: 30px 21px;
+  padding: 1.875rem 20px;
+  border-radius: 16px;
 
-  .statistics__title {
-    font-size: 25px;
+  &__title {
+    font-size: 1.6em;
     text-align: center;
     color: v.$Dark-brown;
     font-weight: 700;
   }
-  .statistics__body {
+  &__body {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: space-around;
+    height: 12.375rem;
+
     .statistics__body__item {
-      .statistics__body__item--mon {
-        @include v.column(33px, 50px, v.$Softred)
-      }
-      p{
-        
+      position: relative;
+
+      .statistics__body__item__bar {
+        @include v.column(32px, 148px, v.$Softred);
         margin-top: 1rem;
+        position: relative;
+        .statistics__body__item__label {
+          margin-top: 1rem;
+          color: v.$Medium-brown;
+          position: absolute;
+          bottom: -32px;
+        }
+        .statistics__body__item__value {
+          width: 2.2rem;
+          position: absolute;
+          font-size: 0.5em;
+          background-color: v.$Dark-brown;
+          text-align: center;
+          padding: 0.5rem 0.5rem;
+          border-radius: 5px;
+          font-weight: 700;
+          left: -3px;
+          top: -2rem;
+          color: v.$Very-pale-orange;
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__divider-line {
+    width: 100%;
+    height: 3px;
+    background-color: v.$Cream;
+    margin-block: 1rem;
+  }
+
+  .statistics__result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__left {
+      &__title {
         color: v.$Medium-brown;
+      }
+      &__total {
+        color: v.$Dark-brown;
+        font-weight: 700;
+        font-size: 2em;
+      }
+    }
+    &__right {
+      &__rate {
+        text-align: end;
+        color: v.$Dark-brown;
+        font-weight: 700;
+      }
+      &__subtitle {
+        color: v.$Medium-brown;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .statistics {
+    height: 26.25rem;
+    margin-top: 1rem;
+    margin-bottom: 4.125rem;
+    background-color: v.$Very-pale-orange;
+    padding: 2.5rem;
+    border-radius: 16px;
+
+    &__title {
+      font-size: 2em;
+    }
+    &__body {
+      display: flex;
+      margin-top: 1.5rem;
+      justify-content: space-around;
+      height: 12.375rem;
+      align-items: first baseline;
+      
+
+      .statistics__body__item {
+        position: relative;
+
+        .statistics__body__item__bar {
+          @include v.column(40px, 148px, v.$Softred);
+          margin-top: 1rem;
+          position: relative;
+          .statistics__body__item__label {
+            margin-top: 1rem;
+            color: v.$Medium-brown;
+            position: absolute;
+            bottom: -32px;
+          }
+          .statistics__body__item__value {
+            width: 3.1375rem;
+            position: absolute;
+            font-size: 0.5em;
+            background-color: v.$Dark-brown;
+            text-align: center;
+            padding: 0.5rem 0.5rem;
+            border-radius: 5px;
+            font-weight: 700;
+            left: -3px;
+            top: -2rem;
+            color: v.$Very-pale-orange;
+            display: none;
+          }
+        }
+      }
+      .statistics__result {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__left {
+          &__title {
+            color: v.$Medium-brown;
+          }
+          &__total {
+            color: v.$Dark-brown;
+            font-weight: 700;
+            font-size: 3em;
+          }
+        }
+        &__right {
+          &__rate {
+            text-align: end;
+            color: v.$Dark-brown;
+            font-weight: 700;
+          }
+          &__subtitle {
+            color: v.$Medium-brown;
+          }
+        }
       }
     }
   }
