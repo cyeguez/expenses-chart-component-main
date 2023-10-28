@@ -155,9 +155,11 @@
     width: 40px;
     height: 148px;
     background-color: hsl(10, 79%, 65%);
-    border-radius: 5px;
     margin-top: 1rem;
     position: relative;
+  }
+  .statistics__body .statistics__body__item .statistics__body__item__bar:hover {
+    background-color: hsl(10, 76%, 71%);
   }
   .statistics__body .statistics__body__item .statistics__body__item__bar .statistics__body__item__label {
     margin-top: 1rem;

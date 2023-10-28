@@ -102,15 +102,20 @@
       justify-content: space-around;
       height: 12.375rem;
       align-items: first baseline;
-      
 
       .statistics__body__item {
         position: relative;
 
         .statistics__body__item__bar {
-          @include v.column(40px, 148px, v.$Softred);
+          width: 40px;
+          height: 148px;
+          background-color: v.$Softred;
           margin-top: 1rem;
           position: relative;
+
+          &:hover {
+            background-color: hsl(10, 76%, 71%);
+          }
           .statistics__body__item__label {
             margin-top: 1rem;
             color: v.$Medium-brown;
