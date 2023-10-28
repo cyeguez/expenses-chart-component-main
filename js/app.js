@@ -39,7 +39,7 @@ bars.forEach((bar) => {
  console.log((hightBar));
  bar.style.height = `${hightBar}px`;
  if(valueBar >= valueMax){
-  bar.style.background= "v.$Cyan";
+  bar.style.background= "hsl(25,34%, 60%)";
  }
 
   
