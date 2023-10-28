@@ -38,7 +38,9 @@ bars.forEach((bar) => {
  let hightBar = Math.trunc((valueBar * 150)/valueMax);
  console.log((hightBar));
  bar.style.height = `${hightBar}px`;
- 
+ if(valueBar >= valueMax){
+  bar.style.background= "v.$Cyan";
+ }
 
   
   
