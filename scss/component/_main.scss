@@ -27,11 +27,15 @@
         @include v.column(32px, 148px, v.$Softred);
         margin-top: 1rem;
         position: relative;
+        display: flex;
+        justify-content: center;
         .statistics__body__item__label {
           margin-top: 1rem;
           color: v.$Medium-brown;
           position: absolute;
           bottom: -32px;
+          
+          
         }
         .statistics__body__item__value {
           width: 2.2rem;

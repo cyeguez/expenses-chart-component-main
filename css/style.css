@@ -81,6 +81,8 @@
   border-radius: 5px;
   margin-top: 1rem;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 .statistics__body .statistics__body__item .statistics__body__item__bar .statistics__body__item__label {
   margin-top: 1rem;
