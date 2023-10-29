@@ -1,4 +1,4 @@
-# Frontend Mentor - Interactive card details form
+# Frontend Mentor - Expenses chart component challenge on Frontend Mentor
 
 Hello!! 🤟🤟, welcome to my repo, thanks for stopping by here.
 
