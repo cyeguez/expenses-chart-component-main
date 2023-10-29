@@ -19,11 +19,11 @@ data.forEach((item) => {
   
 });
 
-console.log(arrayValues)
+
 
 
 let valueMax = Math.max(...arrayValues );
-console.log(valueMax)
+
 
 let bars = document.querySelectorAll(".statistics__body__item__bar");
 bars = [...bars ];//transformamos en nodo en un array
@@ -36,7 +36,7 @@ bars.forEach((bar) => {
  
 
  let hightBar = Math.trunc((valueBar * 150)/valueMax);
- console.log((hightBar));
+
  bar.style.height = `${hightBar}px`;
  if(valueBar >= valueMax){
   bar.style.background= "hsl(186, 34%, 60%)";
